@@ -102,18 +102,16 @@
     color: #dcdbdb;
     font-size: 0.6rem;
 }
+.label-email {
+    color: #dcdbdb;
+    font-size: 1.2rem;
+}
 .label-address:hover,
-.label-phone:hover {
+.label-phone:hover,
+.label-email:hover {
     color: #f1f1f1;
 }
-.book-container {
-    /*width: 3rem;*/
-}
-.book-link-footer {
-    background: var(--navbar-color);
-    font-size: 0.8rem !important;
-    padding: 0.5rem 0.5rem !important;
-}
+
 
 /*Location*/
 .footer-map {

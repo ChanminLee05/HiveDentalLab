@@ -32,8 +32,11 @@ const Footer:React.FC<FooterProps> = ({ info }) => {
                                 <h6 className="contact-info-label">PHONE:</h6>
                                 <p className="label-phone">+1 {info.phoneNumber}</p>
                             </div>
-                            <div className="book-container">
-                                <a className="book-link book-link-footer" href="https://examplesite.trafft.com">Book Now</a>
+                        </div>
+                        <div className="contact-info-email">
+                            <div className="email-container">
+                                <h6 className="contact-info-label">EMAIL:</h6>
+                                <p className="label-email">{info.email}</p>
                             </div>
                         </div>
                     </div>
@@ -43,7 +46,7 @@ const Footer:React.FC<FooterProps> = ({ info }) => {
                 <h4 className="location-label">Our Location</h4>
                 <iframe
                     title='judy-map'
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4757.822744987499!2d-113.54842762301007!3d53.3985252708177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a01ddd2c0b81b1%3A0xb9af9d8dd2604767!2sJudy%E2%80%99s%20Hair%20Salon!5e0!3m2!1sen!2sca!4v1730312670019!5m2!1sen!2sca"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.7789985866543!2d-113.51391492300482!3d53.50814316260469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0239249cf7ac3%3A0xc8955a7bf6ec841a!2sHive%20dental%20lab!5e0!3m2!1sen!2sca!4v1742757928788!5m2!1sen!2sca"
                     className="google-map"
                     style={{border:0}}
                     allowFullScreen={true}
