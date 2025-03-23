@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import "./Navbar.css";
-import { useNavigate } from 'react-router-dom';
 import Hive from "../../Assets/Hive.png"
 import Instagram from "../../Assets/instagram-icon.png"
 
 const Navbar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const navigate = useNavigate();
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -23,15 +21,6 @@ const Navbar: React.FC = () => {
         };
     }, []);
 
-    function goToService() {
-        navigate('/');
-        setTimeout(() => {
-            window.dispatchEvent(new Event("scrollToService"));
-        }, 0);
-    }
-
-
-
     return (
         <nav className={`navbar navbar-expand-lg ${isScrolled ? 'scrolled' : ''} fixed-top`}>
             <div className="container-fluid">
@@ -47,19 +36,19 @@ const Navbar: React.FC = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className={`navbar-nav ${isScrolled ? 'scrolled' : ''}`}>
                         <li className="nav-item">
-                            <a className="nav-link" href="#services" onClick={goToService}>ABOUT</a>
+                            <a className="nav-link" href="/about">ABOUT</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/service-detail">SERVICES</a>
+                            <a className="nav-link" href="/services">SERVICES</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/digital">DIGITAL</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#gallery">GALLERY</a>
+                            <a className="nav-link" href="/gallery">GALLERY</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="https://examplesite.trafft.com">CONTACT</a>
+                            <a className="nav-link" href="/contact">CONTACT</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="https://www.instagram.com/hivedental" target="_blank" rel="noreferrer">

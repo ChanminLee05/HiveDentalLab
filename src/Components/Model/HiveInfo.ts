@@ -2,6 +2,7 @@ export type HiveDental = {
     name: string;
     address: Address;
     phoneNumber: string;
+    email: string;
     hours: OperatingHours[];
 }
 
