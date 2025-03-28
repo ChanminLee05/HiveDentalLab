@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../Nav/Navbar.tsx';
-import { HiveDental } from '../Model/HiveInfo.ts';
+import Navbar from '../../Components/Nav/Navbar';
+import { HiveDental } from '../../Model/HiveInfo';
 
 interface Props {
     info: HiveDental;

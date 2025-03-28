@@ -1,7 +1,7 @@
 import React from 'react'
-import { HiveDental } from '../Model/HiveInfo.ts';
-import Navbar from '../Nav/Navbar.tsx';
-import Footer from '../Footer/Footer.tsx';
+import { HiveDental } from '../../Model/HiveInfo';
+import Navbar from '../../Components/Nav/Navbar';
+import Footer from '../../Components/Footer/Footer';
 
 interface Props {
     info: HiveDental;
