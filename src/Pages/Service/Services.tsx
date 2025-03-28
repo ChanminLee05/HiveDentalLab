@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../Nav/Navbar.tsx';
+import Navbar from '../../Components/Nav/Navbar';
 import "./Service.css"
 import Implant from "../../Assets/Implant.png"
 import Zirconia from "../../Assets/Zirconia.png"
@@ -7,8 +7,8 @@ import Lithium from "../../Assets/Lithium.png"
 import PFM from "../../Assets/PFM.png"
 import Gold from "../../Assets/Gold.png"
 import Onlay from "../../Assets/Onlay.png"
-import Footer from '../Footer/Footer.tsx';
-import { HiveDental } from '../Model/HiveInfo.ts';
+import Footer from '../../Components/Footer/Footer';
+import { HiveDental } from '../../Model/HiveInfo';
 
 interface Props {
     info: HiveDental;

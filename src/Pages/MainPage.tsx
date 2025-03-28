@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from './Nav/Navbar.tsx';
-import Cover from './Cover/Cover.tsx';
-import Footer from './Footer/Footer.tsx';
-import {HiveDental} from "./Model/HiveInfo.ts"
+import Navbar from '../Components/Nav/Navbar';
+import Cover from './Cover/Cover';
+import Footer from '../Components/Footer/Footer';
+import {HiveDental} from "../Model/HiveInfo"
 
 interface MainPageProps {
     info: HiveDental;

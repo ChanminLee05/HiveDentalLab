@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Footer.css";
-import {HiveDental} from "../Model/HiveInfo.ts";
+import {HiveDental} from "../../Model/HiveInfo";
 
 interface FooterProps {
     info: HiveDental;

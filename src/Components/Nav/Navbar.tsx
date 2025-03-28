@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import "./Navbar.css";
-import Hive from "../../Assets/Hive.png"
-import Instagram from "../../Assets/instagram-icon.png"
+import Hive from "../Assets/Hive.png"
 
 const Navbar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -49,11 +48,6 @@ const Navbar: React.FC = () => {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/contact">CONTACT</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="https://www.instagram.com/hivedental" target="_blank" rel="noreferrer">
-                                <img src={Instagram} alt='instagram-icon' className='instagram-icon'/>
-                            </a>
                         </li>
                     </ul>
                 </div>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import MainPage from './Components/MainPage.tsx';
-import {HiveDental} from "./Components/Model/HiveInfo.ts"
-import Services from './Components/Service/Services.tsx';
-import Gallery from './Components/Gallery/Gallery.tsx';
-import About from './Components/About/About.tsx';
-import Digital from './Components/Digital/Digital.tsx';
-import Contact from './Components/Contact/Contact.tsx';
+import MainPage from './Pages/MainPage';
+import {HiveDental} from "./Model/HiveInfo"
+import Services from './Pages/Service/Services';
+import Gallery from './Pages/Gallery/Gallery';
+import About from './Pages/About/About';
+import Digital from './Pages/Digital/Digital';
+import Contact from './Pages/Contact/Contact';
 
 let data:HiveDental = {
   name: 'Hive Dental Laboratory',
