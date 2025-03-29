@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import "./Navbar.css";
-import Hive from "../Assets/Hive.png"
+import Hive from "../../Assets/Hive.png"
 
 const Navbar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);

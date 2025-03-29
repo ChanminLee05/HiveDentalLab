@@ -9,16 +9,14 @@
 }
 .container-fluid {
     margin: 0 4vw;
-    font-size: 1.3rem;
     font-family: var(--title-font);
-
     /* outline: 2px solid red; */
 }
 .navbar-nav {
     gap: 0 2vw;
     display: flex;
     justify-content: flex-end;
-    /*outline: 2px solid red;*/
+    /* outline: 2px solid red; */
 }
 .navbar-nav.scrolled .nav-link {
     color: black;
@@ -135,7 +133,7 @@
     }
     .logo-img {
         width: 26vw;
-        height: 100%;
+        height: 4vw;
     }
     .navbar-expand-lg .navbar-collapse {
         padding-bottom: 0;
@@ -147,22 +145,5 @@
     }
     .nav-item {
         font-size: 1.3vw;
-    }
-
-    /*Language button*/
-    .lang-btn {
-        padding: 0 0.5vw;
-        height: 2.3vw;
-        font-size: 0.9vw;
-    }
-    .dropdown-menu.show {
-        min-width: 7.5vw;
-        height: 2.7vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .dropdown-lang {
-        font-size: 0.9vw;
     }
 }
