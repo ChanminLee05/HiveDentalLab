@@ -24,6 +24,10 @@
 .instagram-img {
     width: 3vw;
     height: 3vw;
+    transition: transform 0.3s ease-in-out;
+}
+.instagram-img:hover {
+    transform: scale(1.1);
 }
 .more-link {
     background-color: white;
@@ -53,7 +57,7 @@
     padding: 5vw 10vw;
     gap: 10px;
 }
-.cover-top-left {
+.cover-mid-left {
 
 }
 .cover-mid-txt1 {
@@ -71,7 +75,7 @@
     border-radius: 5px;
 }
 .cover-mid-right .profile-img {
-    transform: translateX(100%);
+    transform: translateX(30%);
     opacity: 0;
     transition: transform 1.3s ease-out, opacity 1.3s ease-out;
   }
@@ -80,3 +84,79 @@
     transform: translateX(0);
     opacity: 1;
   }
+
+  /* Service */
+  .service-highlight {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 40px;
+    padding: 8vw 0;
+    background-color: #f8f8f8;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+}
+
+.service-box {
+    width: 45%;
+    height: 70vh;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-box h2 {
+    font-size: 2.5vw;
+    color: black;
+    margin-bottom: 60px;
+}
+
+.service-box p {
+    font-size: 1.5vw;
+    color: #333;
+    line-height: 1.5;
+}
+
+.service-images {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.service-img {
+    width: 5vw;
+    height: 5vw;
+    margin-bottom: 45px;
+}
+
+/* Partner */
+.partner {
+    background-color: #f9f9f9;
+    padding: 3vw 15vw 5vw 15vw;
+    text-align: center;
+}
+
+.partner h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 3vw;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.partner-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 6vw;
+    justify-items: center;
+    align-items: center;
+}
+
+.partner-img {
+    max-width: 100%;
+    height: auto;
+}

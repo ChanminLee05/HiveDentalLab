@@ -1,16 +1,41 @@
 import React, { useEffect, useState } from 'react'
-import Sample from '../../Components/Assets/sample.jpg'
+import Sample from '../../Assets/sample.jpg'
 import CoverImg from '../../Assets/Cover.png'
 import Instagram from "../../Assets/instagram-icon.png"
+import Pickup from "../../Assets/pickup.png"
+import Delivery from "../../Assets/delivery.png"
+import Tooth from "../../Assets/tooth.png"
+import Itero from "../../Assets/iTero.png"
+import Trios from "../../Assets/trios.png"
+import Emax from "../../Assets/emax.png"
+import Medit from "../../Assets/medit.png"
+import GC from "../../Assets/gc.png"
+import Argen from "../../Assets/argen.png"
+import Vita from "../../Assets/vita.png"
+import Sirona from "../../Assets/sirona.png"
 import "./Cover.css"
 
 const Cover: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        setIsVisible(true); // Trigger animation on mount
+        setIsVisible(true);
       }, []);
-      
+    
+
+      useEffect(() => {
+        const handleScroll = () => {
+            setIsVisible(window.scrollY >= 500);
+        };
+
+        handleScroll();
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
             <div className="cover-page">
@@ -28,6 +53,44 @@ const Cover: React.FC = () => {
                     </div>
                     <div className="cover-mid-right">
                         <img src={Sample} alt="profile-img" className={`profile-img ${isVisible ? 'show' : ''}`}/>
+                    </div>
+                </div>
+                {/* Pickup and Delivery Section */}
+                <div className="service-highlight">
+                    <div className="service-box">
+                        <h2>Pickup & Delivery Service</h2>
+                        <div className="service-images">
+                            <img src={Pickup} alt="pickup-img" className="service-img"/>
+                            <img src={Delivery} alt="delivery-img" className="service-img"/>
+                        </div>
+                        <p>
+                            Fast, Accurate, and FREE pickup and delivery service.
+                            <br/>
+                            We handle all logistics for crowns, implants, and restorations.
+                        </p>
+                    </div>
+
+                    {/* Custom Crown Section */}
+                    <div className="service-box">
+                        <h2>Custom Shade Crowns</h2>
+                        <img src={Tooth} alt="tooth-img" className="service-img"/>
+                        <p>
+                            Precisely crafted crowns that match your natural tooth color, ensuring a perfect and realistic fit.
+                        </p>
+                    </div>
+                </div>
+                {/* Partner Section*/}
+                <div className="partner">
+                    <h2>Our Trusted Partners</h2>
+                    <div className="partner-images">
+                        <img src={Itero} alt="partner-img" className='partner-img' />
+                        <img src={Trios} alt="partner-img" className='partner-img' />
+                        <img src={Emax} alt="partner-img" className='partner-img' />
+                        <img src={Medit} alt="partner-img" className='partner-img' />
+                        <img src={GC} alt="partner-img" className='partner-img' />
+                        <img src={Argen} alt="partner-img" className='partner-img' />
+                        <img src={Sirona} alt="partner-img" className='partner-img' />
+                        <img src={Vita} alt="partner-img" className='partner-img' />
                     </div>
                 </div>
             </div>
