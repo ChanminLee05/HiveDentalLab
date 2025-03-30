@@ -5,16 +5,17 @@
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    background: rgb(65, 65, 65);
-    padding: 1rem;
-    position: relative;
-    z-index: 9;
+    background: #f9f9f9;
+    color: var(--footer-txt-color);
+    padding: 1.5rem;
     width: 100%;
+    z-index: 9;
 }
 .footer-left {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -22,14 +23,13 @@
 .footer-operation-container {
     display: flex;
     flex-direction: column;
-    justify-items: center;
     align-items: flex-start;
-    width: 40%;
+    width: 45%;
+    margin-bottom: 1.5rem;
 }
 .footer-operation-container h4 {
-    color: white;
-    font-size: 0.9rem;
-    margin: 0 auto 0.5rem auto;
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    margin-bottom: 1rem;
 }
 .operation-list {
     list-style-type: none;
@@ -39,23 +39,21 @@
     width: 100%;
 }
 .operation-item {
-    font-size: 0.6rem;
-    margin: auto;
-    color: #dcdbdb;
-    border-bottom: 1px solid #dcdbdb;
+    font-size: clamp(0.7rem, 1vw, 2rem);
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid var(--footer-txt-color);
+    padding-bottom: 0.5rem;
+    transition: color 0.3s ease-in-out;
 }
 .operation-item:hover {
-    color: #f1f1f1;
+    color: var(--footer-txt-hover-color);
 }
-.day {
-    text-align: left;
+.day, .time {
     margin: 0;
     padding: 0;
 }
 .time {
     text-align: right;
-    margin: 0;
-    padding: 0;
 }
 
 /*Visit-Us*/
@@ -69,8 +67,7 @@
     /*outline: 2px solid red;*/
 }
 .footer-contact-container h4 {
-    color: white;
-    font-size: 0.9rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin: auto !important;
 }
 .contact-info-container {
@@ -79,40 +76,29 @@
     justify-items: center;
 }
 .contact-info-label {
-    font-size: 0.7rem;
+    font-size: clamp(0.7rem, 1vw, 2rem);
     text-align: left;
-    color: white;
-    /*outline: 2px solid red;*/
 }
-.address-label {
-    margin-top: 0.5rem;
+.label-address,
+.label-phone,
+.label-email {
+    margin: 0.5vw 0;
+    color: var(--footer-txt-color);
+    transition: color 0.3s ease-in-out;
 }
-.label-address {
-    color: #dcdbdb;
-    font-size: 0.7rem;
-    text-align: left;
-    margin: 0.2rem 0;
+.label-address:hover,
+.label-phone:hover,
+.label-email:hover {
+    color: var(--footer-txt-hover-color);
 }
 .contact-info-phone {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.label-phone {
-    color: #dcdbdb;
-    font-size: 0.6rem;
+.label-txt {
+    font-size: clamp(0.7rem, 1vw, 2rem);
 }
-.label-email {
-    color: #dcdbdb;
-    font-size: 1.2rem;
-}
-.label-address:hover,
-.label-phone:hover,
-.label-email:hover {
-    color: #f1f1f1;
-}
-
-
 /*Location*/
 .footer-map {
     display: flex;
@@ -124,8 +110,7 @@
     /*outline: 2px solid red;*/
 }
 .location-label {
-    color: white;
-    font-size: 0.9rem;
+    font-size: clamp(0.9rem, 2vw, 3rem);
     margin-top: 1rem;
 }
 .google-map {
@@ -163,9 +148,9 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 2px;
+        width: 1px;
         height: 90%;
-        background-color: white;
+        background-color: var(--footer-txt-color);
     }
     .footer-contact-container h4 {
         font-size: 1.7vw;
@@ -180,38 +165,17 @@
         gap: 2vw;
     }
     .operation-item {
-        font-size: 1.2vw;
         margin: auto;
-        color: #dcdbdb;
-        border-bottom: 1px solid #dcdbdb;
     }
     .contact-info-container {
         margin-bottom: 1vw;
-    }
-    .contact-info-label {
-        font-size: 1vw;
-    }
-    .contact-info-address {
-        /*margin-top: 1vw;*/
     }
     .contact-info-phone {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
     }
-    .label-address {
-        font-size: 1vw;
-    }
-    .label-phone {
-        color: #dcdbdb;
-        font-size: 1vw;
-    }
-    .book-link-footer {
-        font-size: 1.5vw !important;
-        padding: 0.5rem 1rem !important;
-    }
     .location-label {
-        font-size: 2vw;
         margin-top: 0;
     }
     .footer-map {
@@ -222,5 +186,6 @@
     .footer-map iframe {
         width: 100%;
         height: 100%;
+        border-radius: 5px;
     }
 }

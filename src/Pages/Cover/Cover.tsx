@@ -36,6 +36,17 @@ const Cover: React.FC = () => {
         };
     }, []);
 
+    const partners = [
+        { src: Itero, name: "Itero" },
+        { src: Trios, name: "Trios" },
+        { src: Emax, name: "Emax" },
+        { src: Medit, name: "Medit" },
+        { src: GC, name: "GC" },
+        { src: Argen, name: "Argen" },
+        { src: Sirona, name: "Sirona" },
+        { src: Vita, name: "Vita" },
+    ];
+
     return (
         <>
             <div className="cover-page">
@@ -81,16 +92,18 @@ const Cover: React.FC = () => {
                 </div>
                 {/* Partner Section*/}
                 <div className="partner">
-                    <h2>Our Trusted Partners</h2>
-                    <div className="partner-images">
-                        <img src={Itero} alt="partner-img" className='partner-img' />
-                        <img src={Trios} alt="partner-img" className='partner-img' />
-                        <img src={Emax} alt="partner-img" className='partner-img' />
-                        <img src={Medit} alt="partner-img" className='partner-img' />
-                        <img src={GC} alt="partner-img" className='partner-img' />
-                        <img src={Argen} alt="partner-img" className='partner-img' />
-                        <img src={Sirona} alt="partner-img" className='partner-img' />
-                        <img src={Vita} alt="partner-img" className='partner-img' />
+                    <h2>OUR PARTNERS</h2>
+                    <div className="partner-slider">
+                            {partners.map((partner, index) => (
+                                <div className="partner-item" style={{ '--position': index } as React.CSSProperties}>
+                                    <img 
+                                        key={index} 
+                                        src={partner.src} 
+                                        alt={partner.name} 
+                                        className="partner-img" 
+                                    />
+                                </div>
+                            ))}
                     </div>
                 </div>
             </div>
