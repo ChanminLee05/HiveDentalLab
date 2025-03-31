@@ -1,0 +1,6 @@
+.digital-container {
+    max-width: 900px;
+    margin: 8vw auto;
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }

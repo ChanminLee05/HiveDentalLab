@@ -1,35 +1,94 @@
-.services-page {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    margin-top: 7vw;
+.dental-service-title {
+    text-align: center;
+    margin: 8vw 0 3vw 0;
+}
+/* Filter buttons */
+.filter-buttons {
     display: flex;
     justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.filter-btn {
+    padding: 10px 20px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5vw;
+}
+.filter-btn:hover {
+    background-color: #bbb;
+}
+  
+/* Service Container */
+.service-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 7vw 0 5vw 0;
 }
 
+/* Service Category */
 .service-category {
     display: flex;
     justify-content: center;
-    margin: 5vw 10vw 20vw 10vw;
-    flex-wrap: wrap;
-    gap: 50px;
-    height: 100vh;
 }
-.card {
-    width: calc(33.333% - 20px);
-    height: 30vw;
-    max-width: 20vw;
-    max-height: 30vw;
+  
+  .category-title {
     text-align: center;
-}
-.card-img-top {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Service Row */
+  .service-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  /* Service Card */
+  .service-card {
+    width: 20vw;
+    height: 40vw;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .service-img {
     width: 100%;
     height: 15vw;
-}
-.card-body {
+    object-fit: cover;
+  }
+  
+  .service-body {
     width: 100%;
-    height: 10vw;
+    height: 15vw;
+    padding: 0 1vw;
+  }
+  .service-title {
+    font-size: 2vw;
+    text-align: center;
 }
-.card-text {
-    font-size: 1.1vw;
-}
+  .service-description {
+    font-size: 1vw;
+    color: #555;
+  }
+  
+  /* Order styles for service cards */
+  .order-1 {
+    order: 1;
+  }
+  
+  .order-2 {
+    order: 2;
+  }
