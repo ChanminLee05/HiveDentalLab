@@ -8,7 +8,8 @@ body {
 
 :root {
   --logo-font: "Cinzel", serif;
-  --green: #088178;
+  --footer-txt-color: #333;
+  --footer-txt-hover-color: #777777;
   & a {
     text-decoration: none;
     color: black;

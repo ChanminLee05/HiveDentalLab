@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import "./Navbar.css";
 import Hive from "../../Assets/Hive.png"
+import pdf from "../../Assets/RX_FORM.pdf"
 
 const Navbar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -19,6 +20,18 @@ const Navbar: React.FC = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const handleDownload = (event: React.MouseEvent) => {
+        event.preventDefault();
+        const userConfirmed = window.confirm('Do you want to download the RX FORM?');
+
+        if (userConfirmed) {
+            const link = document.createElement('a');
+            link.href = pdf;
+            link.download = 'Hive Prescription.pdf';
+            link.click();
+        }
+    };
 
     return (
         <nav className={`navbar navbar-expand-lg ${isScrolled ? 'scrolled' : ''} fixed-top`}>
@@ -48,6 +61,9 @@ const Navbar: React.FC = () => {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/contact">CONTACT</a>
+                        </li>
+                        <li className="nav-item">
+                            <button className="nav-link" onClick={handleDownload}>RX FORM</button>
                         </li>
                     </ul>
                 </div>
