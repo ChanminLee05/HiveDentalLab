@@ -40,6 +40,7 @@
     right: clamp(27vw, 30vw, 35vw);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     font-size: 1.2vw;
+    font-family: var(--more-font);
     font-weight: bold;
     text-transform: uppercase;
     display: flex;
