@@ -71,8 +71,8 @@ const Cover: React.FC = () => {
                     <div className="service-box">
                         <h2>Pickup & Delivery Service</h2>
                         <div className="service-images">
-                            <img src={Pickup} alt="pickup-img" className="service-img"/>
-                            <img src={Delivery} alt="delivery-img" className="service-img"/>
+                            <img src={Pickup} alt="pickup-img" className="highlight-img"/>
+                            <img src={Delivery} alt="delivery-img" className="highlight-img"/>
                         </div>
                         <p>
                             Fast, Accurate, and FREE pickup and delivery service.
@@ -84,7 +84,7 @@ const Cover: React.FC = () => {
                     {/* Custom Crown Section */}
                     <div className="service-box">
                         <h2>Custom Shade Crowns</h2>
-                        <img src={Tooth} alt="tooth-img" className="service-img"/>
+                        <img src={Tooth} alt="tooth-img" className="highlight-img"/>
                         <p>
                             Precisely crafted crowns that match your natural tooth color, ensuring a perfect and realistic fit.
                         </p>
