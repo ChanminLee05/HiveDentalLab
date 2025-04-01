@@ -37,10 +37,8 @@ const Navbar: React.FC = () => {
         <nav className={`navbar navbar-expand-lg ${isScrolled ? 'scrolled' : ''} fixed-top`}>
             <div className="container-fluid">
                 <a className={`navbar-brand ${isScrolled ? 'scrolled' : ''}`} href="/">
-                    {isScrolled ?
-                        <img src={Hive} alt="" className="logo-img" />
-                        : <img src={Hive} alt="" className="logo-img" />
-                    }
+                    <img src={Hive} alt="" className="logo-img" />
+                    <p>HIVE <span>DENTAL LABORATORY</span></p>
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

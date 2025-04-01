@@ -10,6 +10,7 @@
 .container-fluid {
     margin: 0 4vw;
     font-family: var(--nav-font);
+    font-weight: 600;
     /* outline: 2px solid red; */
 }
 .navbar-nav {
@@ -34,7 +35,7 @@
     width: 100%;
     cursor: pointer;
     transition: color 0.3s ease;
-    color: black;
+    color: rgb(59, 59, 59);
 }
 .nav-item {
     display: flex;
@@ -81,9 +82,24 @@
         justify-content: center;
         align-items: center;
     }
+    .navbar-brand p {
+        margin-left: 10px;
+        font-family: var(--nav-logo-font);
+        font-weight: 400;
+        font-size: clamp(1rem, 2vw, 2.5rem);
+        position: relative;
+        top: 15px;
+    }
+    .navbar-brand span {
+        font-family: var(--nav-font);
+        font-weight: 400;
+        font-size: clamp(1rem, 1.3vw, 1.5rem);
+        position: relative;
+        bottom: 4px;
+    }
     .logo-img {
-        width: 26vw;
-        height: 4vw;
+        width: 8vw;
+        height: 5vw;
     }
     .navbar-expand-lg .navbar-collapse {
         padding-bottom: 0;

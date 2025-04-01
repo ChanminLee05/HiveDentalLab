@@ -22,8 +22,12 @@ const categories = [
         {
           img: Implant,
           title: "Dental Implant",
-          description:
+          description: [
             "Are you missing a tooth? Instead of a bridge, consider getting an Implant. No need to trim natural teeth.",
+            "Brands we use: Straumann, Hiossen, Nobel Biocare, Megagen, etc.",
+            "Production time: 7-10 days.",
+            "5 year warranty.",
+          ],
         },
       ],
     },
@@ -128,7 +132,15 @@ const Services: React.FC<Props> = ({ info }) => {
                     <img src={service.img} alt={service.title} className="service-img" />
                     <div className="service-body">
                       <h3 className="service-title">{service.title}</h3>
-                      <p className="service-description">{service.description}</p>
+                      {Array.isArray(service.description) ? (
+                        <ul className="service-description">
+                          {service.description.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="service-description">{service.description}</p>
+                      )}
                     </div>
                   </div>
                 ))}
