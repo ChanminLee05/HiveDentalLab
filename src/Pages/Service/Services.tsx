@@ -7,6 +7,9 @@ import Lithium from "../../Assets/Lithium.png"
 import PFM from "../../Assets/PFM.png"
 import Gold from "../../Assets/Gold.png"
 import Onlay from "../../Assets/Onlay.png"
+import NG from "../../Assets/NG.jpg"
+import Retainer from "../../Assets/Essix-Retainers.jpg"
+import Flipper from "../../Assets/Flipper.png"
 import Footer from '../../Components/Footer/Footer';
 import { HiveDental } from '../../Model/HiveInfo';
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
@@ -21,10 +24,12 @@ const categories = [
       services: [
         {
           img: Implant,
-          title: "Dental Implant",
+          title: "Implant",
           description: [
-            "Are you missing a tooth? Instead of a bridge, consider getting an Implant. No need to trim natural teeth.",
-            "Brands we use: Straumann, Hiossen, Nobel Biocare, Megagen, etc.",
+            "Why Choose Dental Implants?",
+            "Prevents Bone Deterioration",
+            "Natural Look & Feel",
+            "Straumann, Hiossen, Nobel Biocare, Megagen, etc.",
             "Production time: 7-10 days.",
             "5 year warranty.",
           ],
@@ -37,32 +42,62 @@ const categories = [
         {
           img: Zirconia,
           title: "Zirconia",
-          description:
-            "Grinding zirconia may cause microcracks. We always perform a regeneration step for maximum strength.",
+          description: [
+            "Why Choose Zirconia?",
+            "Unmatched Durability",
+            "Premium Aesthetics",
+            "Lightweight & Comfortable",
+            "3-7 days Production time",
+            "5 year warranty"
+          ]
         },
         {
           img: Lithium,
           title: "Lithium Disilicate",
-          description:
-            "Beautiful Glass Ceramic! We use the best materials: E-max, GC LiSi, Amber, etc.",
+          description: [
+            "Why Choose Lithium Disilicate?",
+            "Unmatched Strength",
+            "More Natural Color & Translucency",
+            "Ideal for Esthetic Zones",
+            "4-10 days Production time",
+            "5 year warranty"
+          ]
         },
         {
           img: PFM,
-          title: "Porcelain Fused Metal Crown",
-          description:
-            "Metal-supported porcelain was the best material for a long time before zirconia.",
+          title: "PFM",
+          description: [
+            "Why Choose PFM?",
+            "Unmatched Strength",
+            "Natural Aesthetics",
+            "Reliable & Proven",
+            "4-10 days Production time",
+            "5 year warranty"
+          ]
         },
         {
             img: Gold,
-            title: "Gold & Metal Crown",
-            description:
-                "Gold is highly durable and biocompatible, offering perfect occlusion and longevity.",
+            title: "Gold / Metal Crown",
+            description: [
+              "Why Choose Gold / Metal Crowns?",
+              "Exceptional Strength",
+              "Superior Longevity",
+              "Biocompatible & Corrosion-Resistant",
+              "4-10 days Production time",
+              "5 year warranty"
+            ]
         },
         {
             img: Onlay,
             title: "Inlay & Onlay",
-            description:
-                "Choose your preferred material: Zirconia, Lithium Disilicate, or Gold.",
+            description: [
+              "Why Choose Inlays & Onlays?",
+              "Stronger Than Fillings",
+              "Minimally Invasive",
+              "Seamless Aesthetics",
+              "3-7 days Production time",
+              "5 year warranty"
+            ]
         },
       ],
     },
@@ -70,16 +105,40 @@ const categories = [
       title: "Orthodontics",
       services: [
         {
-          img: Gold,
+          img: NG,
           title: "Night Guard",
-          description:
-            "Gold is highly durable and biocompatible, offering perfect occlusion and longevity.",
+          description: [
+            "Protect Your Smile While You Sleep",
+            "Improves Sleep & Reduces Jaw Pain",
+            "Customized for Comfort",
+            "Dual / Thermoflex / Hard Night Guard",
+            "3-7 days Production time",
+            "5 year warranty"
+          ]
         },
         {
-          img: Onlay,
+          img: Retainer,
           title: "Essix Retainer",
-          description:
-            "Choose your preferred material: Zirconia, Lithium Disilicate, or Gold.",
+          description: [
+            "Why Choose an Essix Retainer?",
+            "Custom-Fit Comfort",
+            "Easy to Wear & Remove",
+            "Prevents Teeth Shifting",
+            "3-7 days Production time",
+            "5 year warranty"
+          ]
+        },
+        {
+          img: Flipper,
+          title: "Flipper",
+          description: [
+            "Temporary Smile Solution with Long-Lasting Benefits",
+            "Comfortable Fit",
+            "Easy to Maintain",
+            "Non-invasive & Reversible",
+            "3-7 days Production time",
+            "5 year warranty"
+          ]
         },
       ],
     },
@@ -106,11 +165,11 @@ const Services: React.FC<Props> = ({ info }) => {
         <button className="filter-btn" onClick={() => filterServices("All")}>
           All
         </button>
-        <button className="filter-btn" onClick={() => filterServices("Implant")}>
-          Implant
-        </button>
         <button className="filter-btn" onClick={() => filterServices("Restoration")}>
           Restoration
+        </button>
+        <button className="filter-btn" onClick={() => filterServices("Implant")}>
+          Implant
         </button>
         <button className="filter-btn" onClick={() => filterServices("Orthodontics")}>
           Orthodontics
