@@ -12,7 +12,7 @@ const Digital: React.FC<Props> = ({ info }) => {
     return (
         <>
             <Navbar />
-            <div className="digital-container bg-white shadow rounded">
+            <div className="digital-container shadow rounded">
                 <h1 className="text-center mb-4">Digital Scan Order Guide</h1>
                 <p>HIVE Dental Lab accepts digital scans from the following intraoral scanners.</p>
                 <p>Follow the steps below to connect and send files.</p>
